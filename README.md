@@ -51,6 +51,12 @@ Remove-Item Env:APP_BASE_PATH
 
 Serve that build at `/chernobyl/`; keep the manifest and `assets/` at that same base. The app has no service worker. Normal static-host gzip/Brotli compression is recommended; see the measured asset and renderer evidence in [docs/PERFORMANCE.md](docs/PERFORMANCE.md).
 
+### GitHub Pages
+
+The published edition is deployed from `main` of [guygregory/chernobyl](https://github.com/guygregory/chernobyl) to **https://chernobyl.guygregory.com/** by `.github/workflows/pages.yml` (on push or manual dispatch). The workflow runs `npm ci`, data validation, type checking, lint and unit tests, then builds and deploys `dist/` with the official Pages actions. The real-WebGL browser suite remains a local check.
+
+Because the custom domain serves the site at the root, no `APP_BASE_PATH` is needed. `public/CNAME` is copied into the build. Repository Pages settings use **GitHub Actions** as the source with the same custom domain. DNS needs `CNAME chernobyl → guygregory.github.io`; enable **Enforce HTTPS** once GitHub has issued the certificate.
+
 ## Architecture and geography
 
 | Surface | Responsibility |

@@ -18,7 +18,7 @@ describe('original procedural geometry and scene identity', () => {
         }
       }
     }
-  })
+  }, 30_000)
   it('keeps construction, Shelter, NSC and chimney parts independent', () => {
     const before = buildSiteModel(resolveSiteState('1986-before'), 'medium')
     const shelter = buildSiteModel(resolveSiteState('1986-shelter'), 'medium')
