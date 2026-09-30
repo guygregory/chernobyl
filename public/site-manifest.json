@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "edition": "2026-09-30",
+  "geometry": "original-procedural-v1",
+  "coordinateOrigin": [51.3893, 30.0992],
+  "latestMilestone": "latest-2026",
+  "assets": ["assets/atlas-mark.svg"],
+  "notice": "Original, approximate exterior reconstruction. Not survey-grade, not live."
+}
